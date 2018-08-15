@@ -11,6 +11,8 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  final List<String> data = new List<String>.generate(10, (i) => "Data ke $i");
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,12 +22,14 @@ class _MyAppState extends State<MyApp> {
             "ListView"
           ),
         ),
-        body: ListView(
-          children: <Widget>[
-            CardView(),
-            CardView(),
-            CardView(),
-          ],
+        body: ListView.builder(
+          itemCount: data.length,
+          itemBuilder: (context, i) {
+            return new ListTile(
+              leading: Icon(Icons.sentiment_very_satisfied),
+              title: Text("${data[i]}"),
+            );
+          },
         ),
       ),
     );
