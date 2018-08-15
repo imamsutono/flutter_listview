@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-# flutter_listview
 Simple ListView in Flutter
 =======
-# list_view
 
-A new Flutter project.
+A new Flutter project with listview.
 
 ## Getting Started
 
 For help getting started with Flutter, view our online
 [documentation](https://flutter.io/).
->>>>>>> Init with ListView
